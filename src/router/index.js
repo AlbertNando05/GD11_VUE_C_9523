@@ -10,10 +10,16 @@ function loadView(view) {
 const routes = [{
     path: '/',
     component: DashboardLayout,
-    children: [{
+    children: [
+    {
         name: 'UserController',
         path: '',
         component: loadView('userController')
+    },
+    {
+        name: 'cabangController',
+        path: '/branches',
+        component: loadView('cabangController')
     }]
 }, ]
 Vue.use(Router)
